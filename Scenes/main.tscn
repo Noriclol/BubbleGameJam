@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://4lggftb8umv2"]
+
+[ext_resource type="PackedScene" uid="uid://cr4uv863lah6k" path="res://Scenes/player.tscn" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://cnn68aeckmli7" path="res://Scenes/env.tscn" id="2_8gbba"]
+
+[sub_resource type="Curve3D" id="Curve3D_7u77a"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.0112307, 0, 0.0138811, -1.7, 0, -0.1, 1.7, 0, 0.1, 3.0159, 0, -0.012756, -2.1, 0, 0.6, 2.1, 0, -0.6, 8.97223, 0, -4.0037, -2.7, 0, -0.8, 2.7, 0, 0.8, 15.9694, 0, -3.92603, -2.9, 0, -0.7, 2.9, 0, 0.7, 23, 0, 0, 0, 0, 0, 0, 0, 0, 30.0082, 0, 0.0153646),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[node name="Main" type="Node"]
+
+[node name="Game" type="Node3D" parent="."]
+
+[node name="Map" type="Node3D" parent="Game"]
+
+[node name="Path3D" type="Path3D" parent="Game/Map"]
+curve = SubResource("Curve3D_7u77a")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Game/Map/Path3D"]
+transform = Transform3D(0.0714842, 0, -0.997382, 0, 0.999965, 0, 0.997422, 0, 0.0714813, 0.0540565, 0, 0.0099766)
+progress = 0.05
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Game/Map"]
+use_collision = true
+polygon = PackedVector2Array(-1.36126, 0.00761873, -1.02813, 0.505598, 1.98659, 0.484782, 2.24058, 0.0533053)
+mode = 2
+path_node = NodePath("../Path3D")
+path_interval_type = 0
+path_interval = 0.93
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+
+[node name="Player" parent="Game/Map" node_paths=PackedStringArray("path_follow") instance=ExtResource("1_bo1nx")]
+transform = Transform3D(0.999994, 0, -6.25278e-13, 0, 1, 0, -6.39488e-13, 0, 0.999987, -1.28861, 0.593024, -13.8826)
+mass = 10.0
+path_follow = NodePath("../Path3D/PathFollow3D")
+
+[node name="Env" parent="." instance=ExtResource("2_8gbba")]

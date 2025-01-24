@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr4uv863lah6k"]
+
+[ext_resource type="Script" uid="uid://dvyfrum5n0kcs" path="res://Code/Player/Player.gd" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://ciic7v65ycb53" path="res://Code/Player/PlayerMovement.gd" id="2_cvnsp"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7u77a"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7u77a"]
+
+[node name="Player" type="RigidBody3D"]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+script = ExtResource("1_v0iea")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_7u77a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_7u77a")
+
+[node name="CameraTarget" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0987968, -0.0834002)
+
+[node name="Camera3D" type="Camera3D" parent="CameraTarget"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11.3297, 2.42314, 0)
+
+[node name="PlayerMovement" type="Node3D" parent="."]
+script = ExtResource("2_cvnsp")
+metadata/_custom_type_script = ExtResource("2_cvnsp")
