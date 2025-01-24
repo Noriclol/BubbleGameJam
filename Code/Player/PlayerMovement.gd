@@ -3,19 +3,26 @@ class_name PlayerMovement
 
 @export var move_force : float = 10
 @export var jump_force : float = 50
+var shape_cast: ShapeCast3D
+
 var output_delta : float
 
-var jump_counter = 2
+var jump_counter : int = 0
 
 func _ready():
-	
+	shape_cast = $ShapeCast3D
 	pass
 
 func _process(delta):
 	pass
 
 func _physics_process(delta):
-	
+	# Shapecast3d ground check
+	if (shape_cast.is_colliding()):
+		var collider = shape_cast.get_collider(1)
+		if collider and collider.is_in_group("ground"):
+			print("Grounded")
+			jump_counter = 0
 	
 	# Calculate output Delta
 	if Input.is_action_pressed("Move Left") and Global.player:
@@ -34,8 +41,9 @@ func _physics_process(delta):
 		Global.player.path_follow.progress  += output_delta * delta
 	
 	if Input.is_action_just_pressed("Jump"):
-		Global.player.apply_impulse(Vector3.UP * jump_force)
-
+		if jump_counter < 1:
+			jump_counter += 1
+			Global.player.apply_impulse(Vector3.UP * jump_force)
 
 
 #func move_forward():

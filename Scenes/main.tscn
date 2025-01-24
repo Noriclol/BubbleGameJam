@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://4lggftb8umv2"]
+[gd_scene load_steps=4 format=3 uid="uid://t1ardlb2hkt3"]
 
-[ext_resource type="PackedScene" uid="uid://cr4uv863lah6k" path="res://Scenes/player.tscn" id="1_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://cnn68aeckmli7" path="res://Scenes/env.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://b7tgalo56yo60" path="res://Scenes/player.tscn" id="1_bo1nx"]
+[ext_resource type="PackedScene" path="res://Scenes/env.tscn" id="2_8gbba"]
 
 [sub_resource type="Curve3D" id="Curve3D_7u77a"]
 _data = {
@@ -20,10 +20,10 @@ point_count = 6
 curve = SubResource("Curve3D_7u77a")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Game/Map/Path3D"]
-transform = Transform3D(0.0714842, 0, -0.997382, 0, 0.999965, 0, 0.997422, 0, 0.0714813, 0.0540565, 0, 0.0099766)
+transform = Transform3D(0.0714842, 0, -0.997384, 0, 0.999965, 0, 0.997422, 0, 0.0714814, 0.0540565, 0, 0.0099766)
 progress = 0.05
 
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Game/Map"]
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Game/Map" groups=["ground"]]
 use_collision = true
 polygon = PackedVector2Array(-1.36126, 0.00761873, -1.02813, 0.505598, 1.98659, 0.484782, 2.24058, 0.0533053)
 mode = 2

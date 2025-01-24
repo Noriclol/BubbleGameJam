@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc1aarl0my014"]
+
+[ext_resource type="Script" uid="uid://ciic7v65ycb53" path="res://Code/Player/PlayerMovement.gd" id="1_uvnfx"]
+
+[node name="Player" type="RigidBody3D"]
+script = ExtResource("1_uvnfx")

@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cr4uv863lah6k"]
+[gd_scene load_steps=6 format=3 uid="uid://b7tgalo56yo60"]
 
-[ext_resource type="Script" uid="uid://dvyfrum5n0kcs" path="res://Code/Player/Player.gd" id="1_v0iea"]
+[ext_resource type="Script" path="res://Code/Player/Player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://ciic7v65ycb53" path="res://Code/Player/PlayerMovement.gd" id="2_cvnsp"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7u77a"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7u77a"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cvnsp"]
 
 [node name="Player" type="RigidBody3D"]
 axis_lock_angular_x = true
@@ -29,3 +31,8 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11.32
 [node name="PlayerMovement" type="Node3D" parent="."]
 script = ExtResource("2_cvnsp")
 metadata/_custom_type_script = ExtResource("2_cvnsp")
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="PlayerMovement"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("SphereShape3D_cvnsp")
+target_position = Vector3(0, 0, 0)
