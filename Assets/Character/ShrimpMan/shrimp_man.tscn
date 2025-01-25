@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1m6wu1m5lh8s"]
+
+[ext_resource type="PackedScene" uid="uid://bc6ji7damxf1j" path="res://Assets/Character/ShrimpMan/ShrimpMan.fbx" id="1_iut3s"]
+[ext_resource type="Material" uid="uid://beipejx3xoubr" path="res://Assets/Character/ShrimpMan/NSM_ShrimpMan_3d.tres" id="2_hvhsp"]
+
+[node name="ShrimpMan" instance=ExtResource("1_iut3s")]
+
+[node name="Sphere" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_hvhsp")
