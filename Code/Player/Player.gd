@@ -1,7 +1,7 @@
 extends RigidBody3D
 class_name Player
 
-@export var path_follow : PathFollow3D
+@export var path_follow : PathFollow3D = null
 @onready var ground_check: ShapeCast3D = %GroundCheck
 @onready var wall_check_left: RayCast3D = %WallCheck_Left
 @onready var wall_check_right: RayCast3D = %WallCheck_Right
@@ -10,6 +10,8 @@ signal jumped_on_trail(trail : Trail)
 
 func _init() -> void:
 	Global.player = self
+	pass
+	
 	
 func _ready() -> void:
 	jumped_on_trail.connect(on_jumped_on_trail)
@@ -33,9 +35,9 @@ func is_colliding_with_ground() -> bool:
 	return false
 
 
+
 func tie_player_to_trail(collider: Object):
 	print("tying player to trail")
 	var csg_polygon = collider as CSGPolygon3D
-	var path_node = csg_polygon.path_node as Path3D
-	var path_follower = path_node.get_child(0) as PathFollow3D
-	path_follow = path_follower
+	var trail = Global.find_trail_belonging_to_mesh(csg_polygon)
+	path_follow = trail.path_follow

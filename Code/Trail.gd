@@ -6,7 +6,7 @@ class_name Trail
 
 
 func _ready() -> void:
-
+	Global.trails.append(self)
 	pass#csg_mesh.
 
 
