@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://df802apcquy8w"]
+
+[node name="CSGPolygon3D" type="CSGPolygon3D"]
+use_collision = true
+polygon = PackedVector2Array(-3, 0, -2.5, 0.5, 2.5, 0.5, 3, 0)
+mode = 2
+path_node = NodePath("../Trail2")
+path_interval_type = 0
+path_interval = 0.93
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false

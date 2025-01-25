@@ -36,6 +36,10 @@ target_position = Vector3(0, 0, 0)
 
 [node name="WallCheck_Left" type="RayCast3D" parent="CollisionChecks"]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+target_position = Vector3(0, 0, -0.6)
 
 [node name="WallCheck_Right" type="RayCast3D" parent="CollisionChecks"]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+target_position = Vector3(0, 0, 0.6)

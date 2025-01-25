@@ -9,24 +9,11 @@ _data = {
 }
 point_count = 2
 
-[node name="Trail" type="Path3D"]
+[node name="Trail" type="Path3D" node_paths=PackedStringArray("path_follow")]
 curve = SubResource("Curve3D_7u77a")
 script = ExtResource("1_ccptl")
+path_follow = NodePath("PathFollow3D")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="."]
-transform = Transform3D(-0.999973, 0, -8.7417e-08, 0, 0.999965, 0, 8.74204e-08, 0, -0.999934, 0, 0, 1.33084)
-progress = 1.3311
-
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
-use_collision = true
-polygon = PackedVector2Array(-3, 0, -2.5, 0.5, 2.5, 0.5, 3, 0)
-mode = 2
-path_node = NodePath("..")
-path_interval_type = 0
-path_interval = 0.93
-path_simplify_angle = 0.0
-path_rotation = 2
-path_local = false
-path_continuous_u = false
-path_u_distance = 1.0
-path_joined = false
+transform = Transform3D(-0.999973, 0, -8.7417e-08, 0, 0.999965, 0, 8.74204e-08, 0, -0.999934, 0, 0, 2.02999)
+progress = 2.03
