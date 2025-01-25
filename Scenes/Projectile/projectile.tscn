@@ -10,7 +10,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_0v2mo"]
 
 [node name="Projectile" type="RigidBody3D"]
-gravity_scale = 0.5
+gravity_scale = -0.5
 script = ExtResource("1_wggxw")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
