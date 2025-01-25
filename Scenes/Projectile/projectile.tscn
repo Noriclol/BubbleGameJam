@@ -1,12 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://c07blgho4stwm"]
+[gd_scene load_steps=6 format=3 uid="uid://c07blgho4stwm"]
 
 [ext_resource type="Script" uid="uid://cakbn54bq5jyh" path="res://Code/Hit.gd" id="1_helqj"]
+[ext_resource type="Script" uid="uid://brq70jfvtdyy7" path="res://Code/Projectile.gd" id="1_wggxw"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wggxw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wggxw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mqh4e"]
 
 [node name="Projectile" type="RigidBody3D"]
+script = ExtResource("1_wggxw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_wggxw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
