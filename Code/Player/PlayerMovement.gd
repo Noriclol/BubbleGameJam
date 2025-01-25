@@ -1,8 +1,8 @@
 extends Node3D
 class_name PlayerMovement
 
-@export var move_force : float = 10
-@export var jump_force : float = 250
+@export var move_force : float = 5
+@export var jump_force : float = 20
 
 @export var velocity_limit : Vector3 = Vector3(1,2,1)
 
@@ -17,16 +17,18 @@ func _process(delta):
 
 
 func _physics_process(delta):
-	var move_output = handle_movement_force(delta)
+	Global.player.path_follow.progress += input_movement * move_force * delta
+	slave_rigidbody_to_follow()
+	#var move_output = handle_movement_force(delta)
 
 
 
 
 
 # Physics Rigidmody movement
-func handle_movement_force(delta : float) -> Vector3:
-	var directional_force = input_movement * move_force * delta * Global.player.basis.z
-	return directional_force
+#func handle_movement_force(delta : float) -> Vector3:
+	#var directional_force = input_movement * move_force * delta * Global.player.basis.z
+	#return directional_force
 	
 
 

@@ -49,6 +49,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 target_position = Vector3(0, 0, 0.6)
 
 [node name="Hurt" type="Area3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.988429, 0)
 script = ExtResource("3_6t5aa")
 
@@ -56,6 +57,7 @@ script = ExtResource("3_6t5aa")
 shape = SubResource("CapsuleShape3D_vgqql")
 
 [node name="Health" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("4_vgqql")
 
 [connection signal="area_entered" from="Hurt" to="Hurt" method="_on_area_entered"]
