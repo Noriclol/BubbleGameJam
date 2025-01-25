@@ -78,4 +78,22 @@ func process_input():
 			Global.player.apply_impulse(Vector3.UP * jump_force)
 	
 	if Input.is_action_just_pressed("Shoot"):
-		Global.player.shoot.shoot(Global.player.muzzle)
+		var camera = get_viewport().get_camera_3d()
+		var mouse_pos = get_viewport().get_mouse_position()
+
+		# Get the ray origin and direction
+		var ray_origin = camera.project_ray_origin(mouse_pos)
+		var ray_direction = camera.project_ray_normal(mouse_pos)
+
+		# Define a distance for the raycast (e.g., 1000 units forward)
+		var ray_target = ray_origin + ray_direction * 1000
+
+		#if mouse position z is bigger than player position, shoot right
+		if ray_target.z > Global.player.global_position.z:
+			print("Shoot Right")
+			Global.player.shoot.shoot(Global.player.muzzle, Enum.ShootDirection.RIGHT)
+		else:
+			#shoot left
+			print("Shoot Left")
+			Global.player.shoot.shoot(Global.player.muzzle, Enum.ShootDirection.LEFT)
+		

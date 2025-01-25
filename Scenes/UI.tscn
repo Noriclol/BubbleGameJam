@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://bn6lyoe2h87ik"]
 
-[ext_resource type="Script" uid="uid://npy3416g250l" path="res://Code/UI.gd" id="1_w371h"]
+[ext_resource type="Script" path="res://Code/UI.gd" id="1_w371h"]
 [ext_resource type="Script" uid="uid://pnj23tucjk8v" path="res://Code/HealthUI.gd" id="2_nxvpl"]
 [ext_resource type="Texture2D" uid="uid://bdfttcgbpk2at" path="res://Assets/SVGS/Shrimp health icon/Shrimp icon background.svg" id="3_j04uc"]
 [ext_resource type="Texture2D" uid="uid://dhaaxadr67ngj" path="res://Assets/SVGS/Shrimp health icon/Shrimp icon part 1.svg" id="4_vqx31"]
