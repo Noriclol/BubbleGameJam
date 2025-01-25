@@ -10,14 +10,15 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mqh4e"]
 
 [node name="Projectile" type="RigidBody3D"]
+gravity_scale = 0.5
 script = ExtResource("1_wggxw")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(0, -5.96046e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -5.96046e-08, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_wggxw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(0, 5.96046e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -5.96046e-08, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_wggxw")
 
 [node name="Hit" type="Area3D" parent="."]

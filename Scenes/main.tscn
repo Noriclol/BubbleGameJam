@@ -1,13 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://t1ardlb2hkt3"]
+[gd_scene load_steps=7 format=3 uid="uid://t1ardlb2hkt3"]
 
 [ext_resource type="PackedScene" uid="uid://cr4uv863lah6k" path="res://Scenes/player.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" path="res://Scenes/env.tscn" id="2_8gbba"]
 [ext_resource type="PackedScene" path="res://Scenes/TrailMesh.tscn" id="3_21xkr"]
 [ext_resource type="Script" path="res://Code/Trail.gd" id="4_6bp64"]
 [ext_resource type="PackedScene" path="res://Scenes/camera_target.tscn" id="4_kry3j"]
-[ext_resource type="Script" uid="uid://cakbn54bq5jyh" path="res://Code/Hit.gd" id="5_6bp64"]
-[ext_resource type="PackedScene" uid="uid://c07blgho4stwm" path="res://Scenes/Projectile/projectile.tscn" id="6_21xkr"]
-[ext_resource type="Resource" uid="uid://dyjb0cx3815ld" path="res://Resources/Damage/TestDamage.tres" id="6_344ge"]
 
 [sub_resource type="Curve3D" id="Curve3D_8gbba"]
 _data = {
@@ -15,10 +12,6 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 49
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wggxw"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mqh4e"]
 
 [node name="Main" type="Node"]
 
@@ -52,23 +45,4 @@ csg_mesh = NodePath("../../TrailMeshes/CSGPolygon3D")
 [node name="PathFollow3D" type="PathFollow3D" parent="Game/Map/Trails/Trail"]
 transform = Transform3D(-0.99997, 0, 0.00138145, 0, 0.999965, 0, -0.00138151, 0, -0.999931, 0, 0, 0)
 
-[node name="Projectile" type="RigidBody3D" parent="Game"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.744805, 2.0796, 12.2942)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Game/Projectile"]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_wggxw")
-debug_color = Color(0, 0.6, 0.701961, 1)
-
-[node name="Hit" type="Area3D" parent="Game/Projectile"]
-script = ExtResource("5_6bp64")
-data = ExtResource("6_344ge")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Game/Projectile/Hit"]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_mqh4e")
-
 [node name="Env" parent="." instance=ExtResource("2_8gbba")]
-
-[node name="Projectile" parent="." instance=ExtResource("6_21xkr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0808306, 0.226224, 5.89275)
