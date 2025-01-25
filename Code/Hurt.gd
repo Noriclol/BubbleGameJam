@@ -1,15 +1,10 @@
 extends Area3D
-
 class_name Hurt
 
-signal hitbox_detected(hit: Hit)
-
-func _init() -> void:
-	monitoring = true
-	monitorable = false
-	collision_mask = 64 ## Hitboxes layer
+signal hurt(damage:int)
 	
 
-func _ready():
-	area_entered.connect(on_area_entered)
-
+func _on_area_entered(area: Area3D) -> void:
+	if area is Hit:
+		var hit = area as Hit
+		hurt.emit(hit.data.amount)
