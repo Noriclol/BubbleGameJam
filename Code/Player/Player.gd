@@ -13,31 +13,29 @@ func _init() -> void:
 	
 func _ready() -> void:
 	jumped_on_trail.connect(on_jumped_on_trail)
-	
 
-func _physics_process(delta: float) -> void:
-	if path_follow:
-		global_position.x = path_follow.global_position.x
-		global_position.z = path_follow.global_position.z
-		rotation = path_follow.rotation
-		
-	
-	if (Global.player.ground_check.is_colliding()):
-		var collider =  Global.player.ground_check.get_collider(0)
-		if collider and collider.is_in_group("ground"):
-			print("collided with collider")
-			var csg_polygon = collider as CSGPolygon3D
-			var path_node = csg_polygon.path_node as Path3D
-			var path_follower = path_node.get_child(0) as PathFollow3D
 
-			if path_follower is PathFollow3D:
-				print ("It's a path follow")
-			else: 
-				print ("It's not a path follow")
 
-			path_follow = path_follower
-			#jumped_on_trail.emit(trail)
-			#pass
-			
+
+
+
 func on_jumped_on_trail(trail:Trail):
 	print("Jumped on trail "+ trail.name)
+
+
+func is_colliding_with_ground() -> bool:
+	if ( ground_check.is_colliding()):
+		var collider =  ground_check.get_collider(1)
+		if collider and collider.is_in_group("ground"):
+			if !path_follow:
+				tie_player_to_trail(collider)
+			return true
+	return false
+
+
+func tie_player_to_trail(collider: Object):
+	print("tying player to trail")
+	var csg_polygon = collider as CSGPolygon3D
+	var path_node = csg_polygon.path_node as Path3D
+	var path_follower = path_node.get_child(0) as PathFollow3D
+	path_follow = path_follower
