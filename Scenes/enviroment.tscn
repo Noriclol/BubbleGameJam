@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cdapi11pqot2b"]
+
+[node name="Enviroment" type="Node3D"]
