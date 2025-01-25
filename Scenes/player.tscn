@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7tgalo56yo60"]
+[gd_scene load_steps=6 format=3 uid="uid://cr4uv863lah6k"]
 
-[ext_resource type="Script" path="res://Code/Player/Player.gd" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://dvyfrum5n0kcs" path="res://Code/Player/Player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://ciic7v65ycb53" path="res://Code/Player/PlayerMovement.gd" id="2_cvnsp"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7u77a"]
@@ -26,7 +26,16 @@ shape = SubResource("CapsuleShape3D_7u77a")
 script = ExtResource("2_cvnsp")
 metadata/_custom_type_script = ExtResource("2_cvnsp")
 
-[node name="ShapeCast3D" type="ShapeCast3D" parent="PlayerMovement"]
+[node name="CollisionChecks" type="Node3D" parent="."]
+
+[node name="GroundCheck" type="ShapeCast3D" parent="CollisionChecks"]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 shape = SubResource("SphereShape3D_cvnsp")
 target_position = Vector3(0, 0, 0)
+
+[node name="WallCheck_Left" type="RayCast3D" parent="CollisionChecks"]
+unique_name_in_owner = true
+
+[node name="WallCheck_Right" type="RayCast3D" parent="CollisionChecks"]
+unique_name_in_owner = true
