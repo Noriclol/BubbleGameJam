@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6spbgq5520so"]
+
+[ext_resource type="Script" uid="uid://34mnjbuwxpt7" path="res://Scenes/plankton_pickup.gd" id="1_krat7"]
+[ext_resource type="Material" uid="uid://5sswtw0ds1b4" path="res://Resources/Materials/Plankton.tres" id="2_krat7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3304p"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8prji"]
+radius = 0.6
+
+[node name="PlanktonPickup" type="Node3D"]
+script = ExtResource("1_krat7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.853553, -0.146447, 0.5, 0.5, 0.5, -0.707107, -0.146447, 0.853553, 0.5, 0, 1, 0)
+mesh = SubResource("BoxMesh_3304p")
+surface_material_override/0 = ExtResource("2_krat7")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.584865, -0.100347, 0.342606, 0.342606, 0.342606, -0.484518, -0.100347, 0.584865, 0.342606, 0.241672, 1.45448, 0)
+mesh = SubResource("BoxMesh_3304p")
+surface_material_override/0 = ExtResource("2_krat7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.40179, -0.0689363, 0.235363, 0.235363, 0.235363, -0.332854, -0.0689363, 0.40179, 0.235363, -0.128037, 1.78085, 0)
+mesh = SubResource("BoxMesh_3304p")
+surface_material_override/0 = ExtResource("2_krat7")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_8prji")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
