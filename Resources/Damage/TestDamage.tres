@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_nxn6k")
-amount = 10.0
+amount = 100
 metadata/_custom_type_script = ExtResource("1_nxn6k")

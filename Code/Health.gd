@@ -15,8 +15,9 @@ func _ready():
 
 func apply_damage(damage: int) -> void:
 	current_health -= damage
-	take_damage.emit()
-	if current_health < min_health:
+	take_damage.emit(damage)
+	if current_health <= min_health:
+		print("healthmodule: Player Died")
 		dead = true
 		die.emit()
 		

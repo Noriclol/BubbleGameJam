@@ -12,14 +12,17 @@ var input_movement : int
 
 
 func _process(delta):
-	process_input()
+	if !Global.player.health.dead:
+		process_input()
+		
 
 
 
 func _physics_process(delta):
-	Global.player.path_follow.progress += input_movement * move_force * delta
-	Global.player.path_follow.progress_ratio = clampf(Global.player.path_follow.progress_ratio, 0.01, 0.99)
-	slave_rigidbody_to_follow()
+	if !Global.player.health.dead:
+		Global.player.path_follow.progress += input_movement * move_force * delta
+		Global.player.path_follow.progress_ratio = clampf(Global.player.path_follow.progress_ratio, 0.01, 0.99)
+		slave_rigidbody_to_follow()
 	#var move_output = handle_movement_force(delta)
 
 
