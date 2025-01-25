@@ -28,7 +28,7 @@ func _ready() -> void:
 	hurt_module.hurt.connect(health.apply_damage)
 	health.take_damage.connect(player_took_damage)
 	health.die.connect(player_died)
-
+	health.health_changed.connect(UI.health_ui.update_health_ui)
 
 func is_colliding_with_ground() -> bool:
 	if ( ground_check.is_colliding()):

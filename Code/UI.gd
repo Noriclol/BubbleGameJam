@@ -7,3 +7,4 @@ extends CanvasLayer
 @onready var input = %Input
 @onready var velocity = %Velocity
 @onready var acceleration = %Acceleration
+@onready var health_ui = %HealthUI

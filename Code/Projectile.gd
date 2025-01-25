@@ -1,8 +1,8 @@
 extends RigidBody3D
 
 @export var projectile_speed : float = 10
+@export var max_distance : float = 100
 var distance : float = 0
-var max_distance : float = 100
 
 func _physics_process(delta):
 	var movement = -global_transform.basis.z * projectile_speed * delta
