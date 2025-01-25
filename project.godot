@@ -19,6 +19,7 @@ config/icon="res://Assets/icon.svg"
 
 Enum="*res://Code/Enum.gd"
 Global="*res://Code/Global.gd"
+UI="*res://Scenes/UI.tscn"
 
 [file_customization]
 
