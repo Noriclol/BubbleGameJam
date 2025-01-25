@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bn6lyoe2h87ik"]
+[gd_scene load_steps=17 format=3 uid="uid://bn6lyoe2h87ik"]
 
 [ext_resource type="Script" uid="uid://npy3416g250l" path="res://Code/UI.gd" id="1_w371h"]
 [ext_resource type="Script" uid="uid://pnj23tucjk8v" path="res://Code/HealthUI.gd" id="2_nxvpl"]
@@ -10,8 +10,17 @@
 [ext_resource type="Texture2D" uid="uid://dmwex4hesoj8l" path="res://Assets/SVGS/Shrimp health icon/Shrimp icon part 5.svg" id="8_5q4fb"]
 [ext_resource type="Texture2D" uid="uid://c40epprtpa1m5" path="res://Assets/SVGS/Shrimp health icon/Shrimp icon part 6.svg" id="9_mqm5i"]
 [ext_resource type="Texture2D" uid="uid://di3xd4ym8buey" path="res://Assets/SVGS/Shrimp health icon/Shrimp icon part 7.svg" id="10_jnovg"]
+[ext_resource type="Texture2D" uid="uid://dx3kp8urt8op8" path="res://Assets/SVGS/Bubble ammo icon/Bubble ammo icon.svg" id="11_vqx31"]
+[ext_resource type="FontFile" uid="uid://dmg12v5yogku3" path="res://Assets/Fonts/Bubblegum.ttf" id="12_n04ve"]
+[ext_resource type="Texture2D" uid="uid://cl3whua66fqhv" path="res://Assets/SVGS/Plankton icon/Plankton icon.svg" id="13_wi7yl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_13dyv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5q4fb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mqm5i"]
+font = ExtResource("12_n04ve")
+font_size = 56
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_w371h")
@@ -89,3 +98,50 @@ layout_mode = 2
 texture = ExtResource("10_jnovg")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -121.0
+offset_bottom = 184.0
+grow_horizontal = 0
+
+[node name="BubbleUI" type="PanelContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5q4fb")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/BubbleUI"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/BubbleUI/HBoxContainer"]
+custom_minimum_size = Vector2(50, 90)
+layout_mode = 2
+texture = ExtResource("11_vqx31")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/BubbleUI/HBoxContainer"]
+layout_mode = 2
+text = ": X"
+label_settings = SubResource("LabelSettings_mqm5i")
+
+[node name="PlanktonUI" type="PanelContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5q4fb")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/PlanktonUI"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/PlanktonUI/HBoxContainer"]
+custom_minimum_size = Vector2(50, 90)
+layout_mode = 2
+texture = ExtResource("13_wi7yl")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/PlanktonUI/HBoxContainer"]
+layout_mode = 2
+text = ": X"
+label_settings = SubResource("LabelSettings_mqm5i")
