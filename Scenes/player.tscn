@@ -22,12 +22,6 @@ mesh = SubResource("CapsuleMesh_7u77a")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_7u77a")
 
-[node name="CameraTarget" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0987968, -0.0834002)
-
-[node name="Camera3D" type="Camera3D" parent="CameraTarget"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11.3297, 2.42314, 0)
-
 [node name="PlayerMovement" type="Node3D" parent="."]
 script = ExtResource("2_cvnsp")
 metadata/_custom_type_script = ExtResource("2_cvnsp")
