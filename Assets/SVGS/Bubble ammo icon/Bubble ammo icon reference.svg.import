@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx3kp8urt8op8"
-path="res://.godot/imported/Bubble ammo icon.svg-0a41aa92b9b072b070512af3ae670abc.ctex"
+uid="uid://5hhbccm75cbe"
+path="res://.godot/imported/Bubble ammo icon reference.svg-e882f2901fed571cd8e8ccae62c768d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SVGS/Bubble ammo icon/Bubble ammo icon.svg"
-dest_files=["res://.godot/imported/Bubble ammo icon.svg-0a41aa92b9b072b070512af3ae670abc.ctex"]
+source_file="res://Assets/SVGS/Bubble ammo icon/Bubble ammo icon reference.svg"
+dest_files=["res://.godot/imported/Bubble ammo icon reference.svg-e882f2901fed571cd8e8ccae62c768d9.ctex"]
 
 [params]
 
