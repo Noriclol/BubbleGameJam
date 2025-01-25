@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://cakbn54bq5jyh" path="res://Code/Hit.gd" id="1_helqj"]
 [ext_resource type="Script" uid="uid://brq70jfvtdyy7" path="res://Code/Projectile.gd" id="1_wggxw"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_wggxw"]
+[sub_resource type="SphereMesh" id="SphereMesh_wggxw"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wggxw"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_mqh4e"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mqh4e"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_0v2mo"]
 
 [node name="Projectile" type="RigidBody3D"]
 gravity_scale = 0.5
@@ -15,15 +15,15 @@ script = ExtResource("1_wggxw")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, -5.96046e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -5.96046e-08, 0, 0, 0)
-mesh = SubResource("CapsuleMesh_wggxw")
+mesh = SubResource("SphereMesh_wggxw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0, 5.96046e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -5.96046e-08, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_wggxw")
+shape = SubResource("SphereShape3D_mqh4e")
 
 [node name="Hit" type="Area3D" parent="."]
 script = ExtResource("1_helqj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hit"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_mqh4e")
+shape = SubResource("SphereShape3D_0v2mo")
