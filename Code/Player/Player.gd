@@ -13,6 +13,8 @@ class_name Player
 
 @onready var hurt_module : Hurt = %Hurt
 @onready var health : Health = %Health
+@onready var shoot : Shoot = %Shoot
+@onready var muzzle : Muzzle = %Muzzle
 
 
 signal jumped_on_trail(trail : Trail)
