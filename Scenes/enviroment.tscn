@@ -299,7 +299,7 @@ fog_light_energy = 0.5
 fog_density = 0.012
 volumetric_fog_enabled = true
 volumetric_fog_albedo = Color(0.183192, 0.694124, 1, 1)
-volumetric_fog_length = 42.78
+volumetric_fog_length = 21.56
 
 [node name="Enviroment" type="Node3D"]
 
