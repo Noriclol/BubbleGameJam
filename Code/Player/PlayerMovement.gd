@@ -1,8 +1,8 @@
 extends Node3D
 class_name PlayerMovement
 
-@export var move_force : float = 5
-@export var jump_force : float = 20
+@export var move_force : float = 10
+@export var jump_force : float = 50
 
 @export var velocity_limit : Vector3 = Vector3(1,2,1)
 
@@ -18,6 +18,7 @@ func _process(delta):
 
 func _physics_process(delta):
 	Global.player.path_follow.progress += input_movement * move_force * delta
+	Global.player.path_follow.progress_ratio = clampf(Global.player.path_follow.progress_ratio, 0.01, 0.99)
 	slave_rigidbody_to_follow()
 	#var move_output = handle_movement_force(delta)
 
