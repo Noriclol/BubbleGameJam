@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://df802apcquy8w"]
+[gd_scene load_steps=0 format=3 uid="uid://df802apcquy8w"]
 
 [node name="CSGPolygon3D" type="CSGPolygon3D"]
 use_collision = true

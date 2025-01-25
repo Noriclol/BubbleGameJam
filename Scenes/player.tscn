@@ -1,13 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://cr4uv863lah6k"]
+[gd_scene load_steps=8 format=3 uid="uid://cr4uv863lah6k"]
 
-[ext_resource type="Script" uid="uid://dvyfrum5n0kcs" path="res://Code/Player/Player.gd" id="1_v0iea"]
+[ext_resource type="Script" path="res://Code/Player/Player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://ciic7v65ycb53" path="res://Code/Player/PlayerMovement.gd" id="2_cvnsp"]
+[ext_resource type="Script" uid="uid://cgqcyntem630s" path="res://Code/Hurt.gd" id="3_6t5aa"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7u77a"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7u77a"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cvnsp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vgqql"]
 
 [node name="Player" type="RigidBody3D"]
 axis_lock_angular_x = true
@@ -43,3 +46,10 @@ target_position = Vector3(0, 0, -0.6)
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 target_position = Vector3(0, 0, 0.6)
+
+[node name="Hurt" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.988429, 0)
+script = ExtResource("3_6t5aa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hurt"]
+shape = SubResource("CapsuleShape3D_vgqql")

@@ -23,12 +23,18 @@ func _physics_process(delta: float) -> void:
 		
 	
 	if (Global.player.ground_check.is_colliding()):
-		var collider =  Global.player.ground_check.get_collider(1)
+		var collider =  Global.player.ground_check.get_collider(0)
 		if collider and collider.is_in_group("ground"):
 			print("collided with collider")
 			var csg_polygon = collider as CSGPolygon3D
 			var path_node = csg_polygon.path_node as Path3D
 			var path_follower = path_node.get_child(0) as PathFollow3D
+
+			if path_follower is PathFollow3D:
+				print ("It's a path follow")
+			else: 
+				print ("It's not a path follow")
+
 			path_follow = path_follower
 			#jumped_on_trail.emit(trail)
 			#pass
