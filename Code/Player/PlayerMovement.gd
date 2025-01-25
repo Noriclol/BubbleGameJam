@@ -78,4 +78,4 @@ func process_input():
 			Global.player.apply_impulse(Vector3.UP * jump_force)
 	
 	if Input.is_action_just_pressed("Shoot"):
-        Global.player.shoot.shoot(Global.player.muzzle)
+		Global.player.shoot.shoot(Global.player.muzzle)

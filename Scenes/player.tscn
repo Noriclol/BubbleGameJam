@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cr4uv863lah6k"]
+[gd_scene load_steps=11 format=3 uid="uid://cr4uv863lah6k"]
 
 [ext_resource type="Script" path="res://Code/Player/Player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://ciic7v65ycb53" path="res://Code/Player/PlayerMovement.gd" id="2_cvnsp"]
 [ext_resource type="Script" uid="uid://cgqcyntem630s" path="res://Code/Hurt.gd" id="3_6t5aa"]
 [ext_resource type="Script" uid="uid://cbe1xmnyntimi" path="res://Code/Health.gd" id="4_vgqql"]
+[ext_resource type="Script" uid="uid://dyg8t031l5tsw" path="res://Code/Shoot.gd" id="5_x3wgy"]
+[ext_resource type="Script" path="res://Code/Muzzle.gd" id="6_3smsa"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7u77a"]
 
@@ -29,6 +31,9 @@ shape = SubResource("CapsuleShape3D_7u77a")
 
 [node name="PlayerMovement" type="Node3D" parent="."]
 script = ExtResource("2_cvnsp")
+move_force = null
+jump_force = null
+velocity_limit = null
 metadata/_custom_type_script = ExtResource("2_cvnsp")
 
 [node name="CollisionChecks" type="Node3D" parent="."]
@@ -60,5 +65,12 @@ shape = SubResource("CapsuleShape3D_vgqql")
 [node name="Health" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("4_vgqql")
+
+[node name="Shoot" type="Node" parent="."]
+script = ExtResource("5_x3wgy")
+
+[node name="Muzzle" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.588321, 1.69051, 0)
+script = ExtResource("6_3smsa")
 
 [connection signal="area_entered" from="Hurt" to="Hurt" method="_on_area_entered"]
