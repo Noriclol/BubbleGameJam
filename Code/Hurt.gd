@@ -13,6 +13,3 @@ func _init() -> void:
 func _ready():
 	area_entered.connect(on_area_entered)
 
-
-func on_area_entered(hit: Hit) -> void:
-	hitbox_detected.emit(hit)
