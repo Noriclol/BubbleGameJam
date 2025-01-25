@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://4lggftb8umv2"]
+
+[ext_resource type="PackedScene" uid="uid://cr4uv863lah6k" path="res://Scenes/player.tscn" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://ccewuktyo7uyh" path="res://Scenes/Maps/map.tscn" id="1_kry3j"]
+[ext_resource type="PackedScene" uid="uid://cnn68aeckmli7" path="res://Scenes/env.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://dc7yqovmfr5r" path="res://Scenes/camera_target.tscn" id="4_kry3j"]
+[ext_resource type="PackedScene" uid="uid://c07blgho4stwm" path="res://Scenes/Projectile/projectile.tscn" id="6_21xkr"]
+
+[node name="Main" type="Node"]
+
+[node name="Game" type="Node3D" parent="."]
+
+[node name="Map" parent="Game" instance=ExtResource("1_kry3j")]
+
+[node name="Player" parent="Game" instance=ExtResource("1_bo1nx")]
+transform = Transform3D(0.999994, 0, -6.25278e-13, 0, 1, 0, -6.39488e-13, 0, 0.999987, 0, 14.6, 11)
+mass = 10.0
+
+[node name="CameraTarget" parent="Game/Player" instance=ExtResource("4_kry3j")]
+
+[node name="Env" parent="." instance=ExtResource("2_8gbba")]
+
+[node name="Projectile" parent="." instance=ExtResource("6_21xkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0808306, 0.226224, 5.89275)
