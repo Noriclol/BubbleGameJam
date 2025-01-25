@@ -1,42 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://t1ardlb2hkt3"]
+[gd_scene load_steps=6 format=3 uid="uid://4lggftb8umv2"]
 
-[ext_resource type="PackedScene" path="res://Scenes/trail.tscn" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://cr4uv863lah6k" path="res://Scenes/player.tscn" id="1_bo1nx"]
-[ext_resource type="PackedScene" path="res://Scenes/env.tscn" id="2_8gbba"]
-[ext_resource type="PackedScene" path="res://Scenes/TrailMesh.tscn" id="2_jjvhh"]
-[ext_resource type="PackedScene" path="res://Scenes/camera_target.tscn" id="4_kry3j"]
+[ext_resource type="PackedScene" uid="uid://ccewuktyo7uyh" path="res://Scenes/Maps/map.tscn" id="1_kry3j"]
+[ext_resource type="PackedScene" uid="uid://cnn68aeckmli7" path="res://Scenes/env.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://dc7yqovmfr5r" path="res://Scenes/camera_target.tscn" id="4_kry3j"]
 [ext_resource type="PackedScene" uid="uid://c07blgho4stwm" path="res://Scenes/Projectile/projectile.tscn" id="6_21xkr"]
-
-[sub_resource type="Curve3D" id="Curve3D_8gbba"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.0335633, 0, 7.98068, 0, 0, 0, 0, 0, 0, 0.0139958, 0, 15.9643, 0, 0, 0, 0, 0, 0, 0.00913584, 0, 23.9429),
-"tilts": PackedFloat32Array(0, 0, 0, 0)
-}
-point_count = 4
 
 [node name="Main" type="Node"]
 
 [node name="Game" type="Node3D" parent="."]
 
-[node name="Map" type="Node3D" parent="Game"]
-
-[node name="Trails" type="Node3D" parent="Game/Map"]
-
-[node name="Trail" parent="Game/Map/Trails" node_paths=PackedStringArray("csg_mesh") instance=ExtResource("1_8gbba")]
-curve = SubResource("Curve3D_8gbba")
-csg_mesh = NodePath("../../TrailMeshes/CSGPolygon3D")
-
-[node name="Trail2" parent="Game/Map/Trails" instance=ExtResource("1_8gbba")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
-curve = SubResource("Curve3D_8gbba")
-
-[node name="TrailMeshes" type="Node3D" parent="Game/Map"]
-
-[node name="CSGPolygon3D" parent="Game/Map/TrailMeshes" groups=["ground"] instance=ExtResource("2_jjvhh")]
-path_node = NodePath("../../Trails/Trail")
-
-[node name="CSGPolygon3D2" parent="Game/Map/TrailMeshes" groups=["ground"] instance=ExtResource("2_jjvhh")]
-path_node = NodePath("../../Trails/Trail2")
+[node name="Map" parent="Game" instance=ExtResource("1_kry3j")]
 
 [node name="Player" parent="Game" instance=ExtResource("1_bo1nx")]
 transform = Transform3D(0.999994, 0, -6.25278e-13, 0, 1, 0, -6.39488e-13, 0, 0.999987, 0, 14.6, 11)

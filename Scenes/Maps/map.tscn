@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccewuktyo7uyh"]
+
+[ext_resource type="PackedScene" uid="uid://df802apcquy8w" path="res://Scenes/TrailMesh.tscn" id="1_6xgci"]
+[ext_resource type="PackedScene" uid="uid://fpl8e1en5ore" path="res://Scenes/trail.tscn" id="2_k64qy"]
+
+[sub_resource type="Curve3D" id="Curve3D_8gbba"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.0335633, 0, 7.98068, 0, 0, 0, 0, 0, 0, 0.0139958, 0, 15.9643, 0, 0, 0, 0, 0, 0, 0.00913584, 0, 23.9429),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[node name="Map" type="Node3D"]
+
+[node name="TrailMeshes" type="Node3D" parent="."]
+
+[node name="CSGPolygon3D" parent="TrailMeshes" groups=["ground"] instance=ExtResource("1_6xgci")]
+path_node = NodePath("../../Trails/Trail")
+
+[node name="CSGPolygon3D2" parent="TrailMeshes" groups=["ground"] instance=ExtResource("1_6xgci")]
+path_node = NodePath("../../Trails/Trail2")
+
+[node name="Trails" type="Node3D" parent="."]
+
+[node name="Trail" parent="Trails" node_paths=PackedStringArray("csg_mesh") instance=ExtResource("2_k64qy")]
+curve = SubResource("Curve3D_8gbba")
+csg_mesh = NodePath("../../TrailMeshes/CSGPolygon3D")
+
+[node name="Trail2" parent="Trails" instance=ExtResource("2_k64qy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
+curve = SubResource("Curve3D_8gbba")
