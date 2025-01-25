@@ -56,11 +56,11 @@ func process_input():
 	
 	if Input.is_action_pressed("Move Left") and Global.player:
 		print("Player Left")
-		input_movement = 1
+		input_movement = - 1
 		
 	elif Input.is_action_pressed("Move Right") and Global.player:
 		print("Player Right")
-		input_movement = -1
+		input_movement = 1
 	else:
 		input_movement = 0
 	

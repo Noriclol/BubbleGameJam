@@ -16,6 +16,8 @@ class_name Player
 @onready var shoot : Shoot = %Shoot
 @onready var muzzle : Muzzle = %Muzzle
 
+var plankton : int = 0
+var bubbles : int = 0
 
 signal jumped_on_trail(trail : Trail)
 
