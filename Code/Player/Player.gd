@@ -13,16 +13,6 @@ func _init() -> void:
 	pass
 	
 	
-func _ready() -> void:
-	jumped_on_trail.connect(on_jumped_on_trail)
-
-
-
-
-
-
-func on_jumped_on_trail(trail:Trail):
-	print("Jumped on trail "+ trail.name)
 
 
 func is_colliding_with_ground() -> bool:
