@@ -1,0 +1,17 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4r1sfqed7sjm"]
+
+[ext_resource type="PackedScene" uid="uid://dx3ypilgwx1ra" path="res://Assets/Enviroment/AlgeaPoint.fbx" id="1_td43y"]
+[ext_resource type="Texture2D" uid="uid://bcmde3bekextf" path="res://Assets/Enviroment/textures/T_BaseColorFrame.png" id="2_midui"]
+[ext_resource type="Texture2D" uid="uid://dwasggeu526g0" path="res://Assets/Enviroment/textures/T_BaseColorMiddle.png" id="3_8ayqy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1thnr"]
+albedo_texture = ExtResource("2_midui")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dm112"]
+albedo_texture = ExtResource("3_8ayqy")
+
+[node name="AlgeaPoint" instance=ExtResource("1_td43y")]
+
+[node name="Cube" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_1thnr")
+surface_material_override/1 = SubResource("StandardMaterial3D_dm112")
