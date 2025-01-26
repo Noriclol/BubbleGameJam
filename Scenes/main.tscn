@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://t1ardlb2hkt3"]
+[gd_scene load_steps=8 format=3 uid="uid://4lggftb8umv2"]
 
 [ext_resource type="PackedScene" uid="uid://cr4uv863lah6k" path="res://Scenes/player.tscn" id="1_bo1nx"]
-[ext_resource type="PackedScene" path="res://Scenes/TrailMesh.tscn" id="3_21xkr"]
-[ext_resource type="Script" path="res://Code/Trail.gd" id="4_6bp64"]
-[ext_resource type="PackedScene" path="res://Scenes/camera_target.tscn" id="4_kry3j"]
+[ext_resource type="PackedScene" uid="uid://df802apcquy8w" path="res://Scenes/TrailMesh.tscn" id="3_21xkr"]
+[ext_resource type="Script" uid="uid://cu54e7pmo22vd" path="res://Code/Trail.gd" id="4_6bp64"]
+[ext_resource type="Material" uid="uid://ow7t3rum16wb" path="res://Resources/Materials/Sand.tres" id="4_21xkr"]
+[ext_resource type="PackedScene" uid="uid://dc7yqovmfr5r" path="res://Scenes/camera_target.tscn" id="4_kry3j"]
 [ext_resource type="PackedScene" uid="uid://cdapi11pqot2b" path="res://Scenes/enviroment.tscn" id="7_ynf5e"]
 
 [sub_resource type="Curve3D" id="Curve3D_8gbba"]
@@ -30,6 +31,7 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 
 [node name="TrailMeshes" type="Node3D" parent="Game/Map"]
 
 [node name="CSGPolygon3D" parent="Game/Map/TrailMeshes" groups=["ground"] instance=ExtResource("3_21xkr")]
+material_override = ExtResource("4_21xkr")
 path_node = NodePath("../../Trails/Trail")
 
 [node name="CSGPolygon3D2" parent="Game/Map/TrailMeshes" groups=["ground"] instance=ExtResource("3_21xkr")]
