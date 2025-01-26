@@ -3,9 +3,9 @@ extends RigidBody3D
 class_name Enemy
 
 @export var health : Health
+@export var enemy_path_follow : PathFollow3D
 
 var speed : float = 0.2
-var path_follow : PathFollow3D = null
 var should_follow : bool = false
 
 func _ready() -> void:
@@ -22,9 +22,13 @@ func move_enemy(delta:float) -> void:
 	var direction = (Global.player.global_transform.origin - global_transform.origin).normalized()
 	print(direction.z)
 	if direction.z < 0:
-		Global.enemy_manager.path_follow.progress -= speed * delta
+		enemy_path_follow.progress -= speed
+		print("Enemy is moving left")
+	elif direction.z > 0:
+		enemy_path_follow.progress += speed
+		print("Enemy is moving right")
 	else:
-		Global.enemy_manager.path_follow.progress += speed * delta
+		print("Enemy is at player position")
 
 
 

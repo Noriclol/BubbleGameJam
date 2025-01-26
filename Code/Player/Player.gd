@@ -36,7 +36,7 @@ func _ready() -> void:
 
 func is_colliding_with_ground() -> bool:
 	if ( ground_check.is_colliding()):
-		var collider =  ground_check.get_collider(0)
+		var collider =  ground_check.get_collider(1)
 		if collider and collider.is_in_group("ground"):
 			return true
 	return false
