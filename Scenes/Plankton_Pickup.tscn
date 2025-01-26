@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6spbgq5520so"]
 
-[ext_resource type="Script" uid="uid://34mnjbuwxpt7" path="res://Scenes/plankton_pickup.gd" id="1_krat7"]
+[ext_resource type="Script" uid="uid://34mnjbuwxpt7" path="res://Code/plankton_pickup.gd" id="1_krat7"]
 [ext_resource type="PackedScene" uid="uid://b4r1sfqed7sjm" path="res://Assets/Enviroment/algea_point.tscn" id="2_krat7"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_8prji"]
