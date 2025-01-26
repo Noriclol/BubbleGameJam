@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnk8jvgmhktss"]
+[gd_scene load_steps=9 format=3 uid="uid://cnk8jvgmhktss"]
 
 [ext_resource type="PackedScene" uid="uid://cr4uv863lah6k" path="res://Scenes/player.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://df802apcquy8w" path="res://Scenes/TrailMesh.tscn" id="3_21xkr"]
 [ext_resource type="Script" uid="uid://cu54e7pmo22vd" path="res://Code/Trail.gd" id="4_6bp64"]
 [ext_resource type="Material" uid="uid://ow7t3rum16wb" path="res://Resources/Materials/Sand.tres" id="4_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dc7yqovmfr5r" path="res://Scenes/camera_target.tscn" id="4_kry3j"]
+[ext_resource type="PackedScene" uid="uid://b6spbgq5520so" path="res://Scenes/Plankton_Pickup.tscn" id="7_6bp64"]
 [ext_resource type="PackedScene" uid="uid://cdapi11pqot2b" path="res://Scenes/enviroment.tscn" id="7_ynf5e"]
 
 [sub_resource type="Curve3D" id="Curve3D_8gbba"]
@@ -51,3 +52,215 @@ transform = Transform3D(-0.99997, 0, 0.00138145, 0, 0.999965, 0, -0.00138151, 0,
 
 [node name="Enviroment" parent="Game" instance=ExtResource("7_ynf5e")]
 transform = Transform3D(1.25366, 0, 2.1714, 0, 2.50732, 0, -2.1714, 0, 1.25366, -145.403, 0, 378.132)
+
+[node name="Plankton nodes" type="Node3D" parent="."]
+
+[node name="PlanktonPickup" parent="Plankton nodes" instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.98278, 0.403282, 85.1644)
+
+[node name="PlanktonPickup2" parent="Plankton nodes" instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.98278, 0.403282, 82.9169)
+
+[node name="PlanktonPickup3" parent="Plankton nodes" instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.98278, 0.403282, 80.5327)
+
+[node name="PlanktonPickup4" parent="Plankton nodes" instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.884737, 0.436617, 45.1764)
+
+[node name="PlanktonPickup5" parent="Plankton nodes" instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.605872, 0.436617, 43.1945)
+
+[node name="PlanktonPickup6" parent="Plankton nodes" instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.152325, 0.436617, 14.2259)
+
+[node name="PlanktonPickup7" parent="Plankton nodes" instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8298, 0.358753, 194.689)
+
+[node name="PlanktonPickup8" parent="Plankton nodes" instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.9766, 0.45224, 203.302)
+
+[node name="PlanktonPickup9" parent="Plankton nodes" instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.379, 0.49808, 219.906)
+
+[node name="PlanktonPickup10" parent="Plankton nodes" instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.567919, 0.196547, 143.727)
+
+[node name="PlanktonPickup" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5937, 0.36758, 243.319)
+
+[node name="PlanktonPickup2" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.3286, 0.368141, 258.217)
+
+[node name="PlanktonPickup3" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.3996, 0.340828, 284.425)
+
+[node name="PlanktonPickup4" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.866, 0.412678, 316.461)
+
+[node name="PlanktonPickup5" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7493, 0.198292, 390.946)
+
+[node name="PlanktonPickup6" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0078, 0.279268, 396.694)
+
+[node name="PlanktonPickup7" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1578, 0.289715, 403.424)
+
+[node name="PlanktonPickup8" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.74618, 0.292395, 411.925)
+
+[node name="PlanktonPickup9" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13604, 0.281532, 418.498)
+
+[node name="PlanktonPickup10" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3623, 0.256077, 424.641)
+
+[node name="PlanktonPickup11" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4666, 0.22596, 427.323)
+
+[node name="PlanktonPickup12" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.1599, 0.153797, 428.954)
+
+[node name="PlanktonPickup13" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97.3354, 0.464682, 374.516)
+
+[node name="PlanktonPickup14" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.763, 0.723396, 364.437)
+
+[node name="PlanktonPickup15" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.579, 2.18192, 355.135)
+
+[node name="PlanktonPickup16" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -148.689, 5.93163, 346.341)
+
+[node name="PlanktonPickup17" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -217.498, 12.1912, 325.611)
+
+[node name="PlanktonPickup18" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -248.91, 13.0519, 309.886)
+
+[node name="PlanktonPickup19" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -312.254, 13.0107, 280.156)
+
+[node name="PlanktonPickup20" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -325.736, 12.7763, 278.537)
+
+[node name="PlanktonPickup21" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -339.981, 12.8029, 279.383)
+
+[node name="PlanktonPickup22" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -362.3, 13.2158, 285.521)
+
+[node name="PlanktonPickup23" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -384.287, 12.4148, 305.241)
+
+[node name="PlanktonPickup24" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -400.237, 12.8802, 332.347)
+
+[node name="PlanktonPickup25" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -409.172, 15.9853, 368.395)
+
+[node name="PlanktonPickup26" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -414.746, 20.094, 398.776)
+
+[node name="PlanktonPickup27" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -403.741, 25.5668, 438.989)
+
+[node name="PlanktonPickup28" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -395.131, 27.5749, 474.198)
+
+[node name="PlanktonPickup29" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -424.489, 40.641, 507.926)
+
+[node name="PlanktonPickup30" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -448.504, 47.0456, 514.092)
+
+[node name="PlanktonPickup31" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -485.371, 51.6449, 509.325)
+
+[node name="PlanktonPickup32" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -531.154, 54.7187, 509.887)
+
+[node name="PlanktonPickup33" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -562.501, 54.8711, 516.435)
+
+[node name="PlanktonPickup34" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -582.802, 53.974, 528.453)
+
+[node name="PlanktonPickup35" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -585.349, 53.9352, 530.94)
+
+[node name="PlanktonPickup36" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -588.748, 53.8021, 533.876)
+
+[node name="PlanktonPickup37" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -602.661, 55.9656, 582.316)
+
+[node name="PlanktonPickup38" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -595.097, 55.4922, 626.572)
+
+[node name="PlanktonPickup39" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -564.81, 55.3732, 654.465)
+
+[node name="PlanktonPickup40" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -508.896, 58.5687, 677.703)
+
+[node name="PlanktonPickup41" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -463.482, 64.0418, 675.281)
+
+[node name="PlanktonPickup42" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -430.708, 64.0255, 622.522)
+
+[node name="PlanktonPickup43" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -431.686, 63.9963, 579.56)
+
+[node name="PlanktonPickup44" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -456.636, 63.9254, 550.17)
+
+[node name="PlanktonPickup45" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -497.4, 63.919, 538.275)
+
+[node name="PlanktonPickup46" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -546.017, 63.9115, 542.718)
+
+[node name="PlanktonPickup47" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -578.286, 63.9136, 593.817)
+
+[node name="PlanktonPickup48" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -552.599, 64.0142, 639.385)
+
+[node name="PlanktonPickup49" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -506.515, 64.1684, 648.32)
+
+[node name="PlanktonPickup50" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -464.297, 64.2069, 628.66)
+
+[node name="PlanktonPickup51" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -465.452, 62.9618, 596.06)
+
+[node name="PlanktonPickup52" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -475.558, 63.8788, 578.329)
+
+[node name="PlanktonPickup53" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -484.967, 63.9946, 571.224)
+
+[node name="PlanktonPickup54" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -489.796, 63.9747, 568.928)
+
+[node name="PlanktonPickup55" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -492.387, 64.0399, 568.926)
+
+[node name="PlanktonPickup56" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -495.708, 64.0781, 568.716)
+
+[node name="PlanktonPickup57" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -498.121, 64.1058, 568.563)
+
+[node name="PlanktonPickup58" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -500.93, 64.0321, 567.897)
+
+[node name="PlanktonPickup59" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -503.61, 63.9921, 567.402)
+
+[node name="PlanktonPickup60" parent="." instance=ExtResource("7_6bp64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -507.062, 63.9965, 567.02)
