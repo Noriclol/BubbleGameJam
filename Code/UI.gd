@@ -8,3 +8,4 @@ extends CanvasLayer
 @onready var velocity = %Velocity
 @onready var acceleration = %Acceleration
 @onready var health_ui = %HealthUI
+@onready var bubble_ui = %BubbleUI

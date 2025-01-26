@@ -31,6 +31,7 @@ func _ready() -> void:
 	health.take_damage.connect(player_took_damage)
 	health.die.connect(player_died)
 	health.health_changed.connect(UI.health_ui.update_health_ui)
+	shoot.send_bubble_count.connect(UI.bubble_ui.update_bubble_ui)
 
 func is_colliding_with_ground() -> bool:
 	if ( ground_check.is_colliding()):

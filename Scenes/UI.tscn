@@ -1,6 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://bn6lyoe2h87ik"]
+[gd_scene load_steps=18 format=3 uid="uid://bn6lyoe2h87ik"]
 
-[ext_resource type="Script" path="res://Code/UI.gd" id="1_w371h"]
+[ext_resource type="Script" uid="uid://npy3416g250l" path="res://Code/UI.gd" id="1_w371h"]
 [ext_resource type="Script" uid="uid://pnj23tucjk8v" path="res://Code/HealthUI.gd" id="2_nxvpl"]
 [ext_resource type="Texture2D" uid="uid://bdfttcgbpk2at" path="res://Assets/SVGS/Shrimp health icon/Shrimp icon background.svg" id="3_j04uc"]
 [ext_resource type="Texture2D" uid="uid://dhaaxadr67ngj" path="res://Assets/SVGS/Shrimp health icon/Shrimp icon part 1.svg" id="4_vqx31"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c40epprtpa1m5" path="res://Assets/SVGS/Shrimp health icon/Shrimp icon part 6.svg" id="9_mqm5i"]
 [ext_resource type="Texture2D" uid="uid://di3xd4ym8buey" path="res://Assets/SVGS/Shrimp health icon/Shrimp icon part 7.svg" id="10_jnovg"]
 [ext_resource type="Texture2D" uid="uid://dx3kp8urt8op8" path="res://Assets/SVGS/Bubble ammo icon/Bubble ammo icon.svg" id="11_vqx31"]
+[ext_resource type="Script" uid="uid://bghxmqchc17kv" path="res://Code/BubbleUI.gd" id="11_wi7yl"]
 [ext_resource type="FontFile" uid="uid://dmg12v5yogku3" path="res://Assets/Fonts/Bubblegum.ttf" id="12_n04ve"]
 [ext_resource type="Texture2D" uid="uid://cl3whua66fqhv" path="res://Assets/SVGS/Plankton icon/Plankton icon.svg" id="13_wi7yl"]
 
@@ -109,8 +110,10 @@ offset_bottom = 184.0
 grow_horizontal = 0
 
 [node name="BubbleUI" type="PanelContainer" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_5q4fb")
+script = ExtResource("11_wi7yl")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/BubbleUI"]
 layout_mode = 2
@@ -122,7 +125,8 @@ texture = ExtResource("11_vqx31")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="Control/VBoxContainer/BubbleUI/HBoxContainer"]
+[node name="BubbleLabel" type="Label" parent="Control/VBoxContainer/BubbleUI/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = ": X"
 label_settings = SubResource("LabelSettings_mqm5i")
