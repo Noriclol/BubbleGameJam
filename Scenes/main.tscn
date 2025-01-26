@@ -1,13 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://t1ardlb2hkt3"]
+[gd_scene load_steps=8 format=3 uid="uid://cnk8jvgmhktss"]
 
 [ext_resource type="PackedScene" uid="uid://cr4uv863lah6k" path="res://Scenes/player.tscn" id="1_bo1nx"]
-[ext_resource type="PackedScene" path="res://Scenes/TrailMesh.tscn" id="3_21xkr"]
-[ext_resource type="Script" path="res://Code/Trail.gd" id="4_6bp64"]
+[ext_resource type="PackedScene" uid="uid://df802apcquy8w" path="res://Scenes/TrailMesh.tscn" id="3_21xkr"]
+[ext_resource type="Script" uid="uid://cu54e7pmo22vd" path="res://Code/Trail.gd" id="4_6bp64"]
 [ext_resource type="Material" uid="uid://ow7t3rum16wb" path="res://Resources/Materials/Sand.tres" id="4_21xkr"]
-[ext_resource type="PackedScene" path="res://Scenes/camera_target.tscn" id="4_kry3j"]
-[ext_resource type="PackedScene" path="res://Scenes/Plankton_Pickup.tscn" id="7_344ge"]
+[ext_resource type="PackedScene" uid="uid://dc7yqovmfr5r" path="res://Scenes/camera_target.tscn" id="4_kry3j"]
 [ext_resource type="PackedScene" uid="uid://cdapi11pqot2b" path="res://Scenes/enviroment.tscn" id="7_ynf5e"]
-[ext_resource type="PackedScene" uid="uid://bfbnmcx66nc7j" path="res://Scenes/Bubble_Pickup.tscn" id="8_ynf5e"]
 
 [sub_resource type="Curve3D" id="Curve3D_8gbba"]
 _data = {
@@ -21,7 +19,7 @@ point_count = 88
 [node name="Game" type="Node3D" parent="."]
 
 [node name="Player" parent="Game" node_paths=PackedStringArray("path_follow") instance=ExtResource("1_bo1nx")]
-transform = Transform3D(0.999994, 0, -6.25278e-13, 0, 1, 0, -6.39488e-13, 0, 0.999987, 0, 1.24405, 12.2962)
+transform = Transform3D(0.999994, 0, -6.25278e-13, 0, 1, 0, -6.39488e-13, 0, 0.999987, 0, 1.24405, 5.90647)
 mass = 10.0
 path_follow = NodePath("../Map/Trails/Trail/PathFollow3D")
 
@@ -53,9 +51,3 @@ transform = Transform3D(-0.99997, 0, 0.00138145, 0, 0.999965, 0, -0.00138151, 0,
 
 [node name="Enviroment" parent="Game" instance=ExtResource("7_ynf5e")]
 transform = Transform3D(1.25366, 0, 2.1714, 0, 2.50732, 0, -2.1714, 0, 1.25366, -145.403, 0, 378.132)
-
-[node name="PlanktonPickup" parent="." instance=ExtResource("7_344ge")]
-transform = Transform3D(0.999768, 0, 0.0215357, 0, 1, 0, -0.0215357, 0, 0.999768, -1.0482, 0.467878, 36.6341)
-
-[node name="BubblePickup" parent="." instance=ExtResource("8_ynf5e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.563498, 0.463486, 34.2431)

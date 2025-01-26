@@ -418,7 +418,22 @@ mesh = SubResource("ArrayMesh_isakg")
 skeleton = NodePath("")
 
 [node name="Icosphere_002" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
-transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 22.7911, 0, 111.496)
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 22.7911, -1.14196, 111.496)
+mesh = SubResource("ArrayMesh_0uyqd")
+skeleton = NodePath("")
+
+[node name="Icosphere_004" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -191.938, -4.85287, 83.0606)
+mesh = SubResource("ArrayMesh_isakg")
+skeleton = NodePath("")
+
+[node name="Icosphere_005" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -143.359, -9.90879, 111.496)
+mesh = SubResource("ArrayMesh_0uyqd")
+skeleton = NodePath("")
+
+[node name="Icosphere_003" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 147.742, 4.71574, 111.496)
 mesh = SubResource("ArrayMesh_0uyqd")
 skeleton = NodePath("")
 
@@ -427,8 +442,78 @@ transform = Transform3D(99.4239, 4.5269, -9.7155, 10.7184, -41.9916, 90.1211, -4
 mesh = SubResource("ArrayMesh_af01c")
 skeleton = NodePath("")
 
+[node name="Icosphere_007" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(-26.8836, 96.3186, 1.1482e-05, 0, -1.19209e-05, 100, 96.3186, 26.8836, 3.20476e-06, 11.6131, 0.357976, -70.807)
+mesh = SubResource("ArrayMesh_0uyqd")
+skeleton = NodePath("")
+
+[node name="Purple Flour3" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(-26.7287, 86.0894, 43.2919, 10.7184, -41.9916, 90.1211, 95.7637, 28.7284, 1.99642, 26.8625, -9.89665, -17.1038)
+mesh = SubResource("ArrayMesh_af01c")
+skeleton = NodePath("")
+
+[node name="Icosphere_006" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(10.6872, 99.4273, 1.18526e-05, 0, -1.19209e-05, 100, 99.4273, -10.6872, -1.274e-06, 141.787, -11.6879, -87.5627)
+mesh = SubResource("ArrayMesh_0uyqd")
+skeleton = NodePath("")
+
+[node name="Purple Flour2" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(10.6256, 90.608, 40.9547, 10.7184, -41.9916, 90.1211, 98.8545, -5.18622, -14.1736, 151.372, -12.6389, -93.7582)
+mesh = SubResource("ArrayMesh_af01c")
+skeleton = NodePath("")
+
 [node name="Seea Urchin" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
 transform = Transform3D(169.044, 0, 0, 0, -2.01516e-05, 116.12, 0, -169.044, -1.38426e-05, 4.29692, 0.495062, -59.4904)
+mesh = SubResource("ArrayMesh_b8wuk")
+skeleton = NodePath("")
+
+[node name="Seea Urchin3" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(169.044, 0, 0, 0, -2.01516e-05, 116.12, 0, -169.044, -1.38426e-05, -110.055, 10.7419, -78.2996)
+mesh = SubResource("ArrayMesh_b8wuk")
+skeleton = NodePath("")
+
+[node name="Seea Urchin2" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(107.325, -130.604, -1.06948e-05, 0, -2.01516e-05, 116.12, -130.604, -107.325, -8.78856e-06, -1.92654, -3.06296, 100.651)
+mesh = SubResource("ArrayMesh_b8wuk")
+skeleton = NodePath("")
+
+[node name="Icosphere_008" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(-59.2899, -80.5277, -9.59963e-06, 3.16405e-13, -1.19209e-05, 100, -80.5277, 59.2899, 7.06789e-06, 176.829, -11.5522, 29.4649)
+mesh = SubResource("ArrayMesh_isakg")
+skeleton = NodePath("")
+
+[node name="Icosphere_009" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(-59.2899, -80.5277, -9.59963e-06, 3.16405e-13, -1.19209e-05, 100, -80.5277, 59.2899, 7.06789e-06, 170.925, -11.8247, -30.9455)
+mesh = SubResource("ArrayMesh_0uyqd")
+skeleton = NodePath("")
+
+[node name="Seea Urchin4" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(-168.805, -8.99145, -7.36291e-07, -2.01601e-13, -2.01516e-05, 116.12, -8.99145, 168.805, 1.3823e-05, 176.847, -12.3117, -0.179591)
+mesh = SubResource("ArrayMesh_b8wuk")
+skeleton = NodePath("")
+
+[node name="Icosphere_010" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(89.8871, 43.8214, 5.22391e-06, 8.83092e-14, -1.19209e-05, 100, 43.8214, -89.8871, -1.07153e-05, -38.3794, -2.29501, -140.628)
+mesh = SubResource("ArrayMesh_0uyqd")
+skeleton = NodePath("")
+
+[node name="Purple Flour4" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(89.3692, 43.7903, 9.77496, 10.7184, -41.9916, 90.1211, 43.569, -79.4928, -42.2212, -38.5289, -2.68517, -152.041)
+mesh = SubResource("ArrayMesh_af01c")
+skeleton = NodePath("")
+
+[node name="Icosphere_011" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(-99.7266, 7.38996, 8.80952e-07, 8.88589e-13, -1.19209e-05, 100, 7.38996, 99.7266, 1.18883e-05, 79.3648, -5.56957, -108.074)
+mesh = SubResource("ArrayMesh_isakg")
+skeleton = NodePath("")
+
+[node name="Icosphere_012" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(-99.7266, 7.38996, 8.80952e-07, 8.88589e-13, -1.19209e-05, 100, 7.38996, 99.7266, 1.18883e-05, 25.0642, -5.3632, -135.198)
+mesh = SubResource("ArrayMesh_0uyqd")
+skeleton = NodePath("")
+
+[node name="Seea Urchin5" type="MeshInstance3D" parent="Seafloor/SeaFloor_Assets"]
+transform = Transform3D(-97.3797, 138.178, 1.1315e-05, -2.23753e-13, -2.01516e-05, 116.12, 138.178, 97.3797, 7.97419e-06, 54.2687, -1.34634, -123.853)
 mesh = SubResource("ArrayMesh_b8wuk")
 skeleton = NodePath("")
 
@@ -454,13 +539,128 @@ transform = Transform3D(-19.7933, 89.8433, -7.87748, -9.79528, 5.87572, 91.6252,
 mesh = SubResource("ArrayMesh_0s2xv")
 skeleton = NodePath("")
 
+[node name="Funnel7" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(-19.7933, 89.8433, -7.87748, -9.79528, 5.87572, 91.6252, 89.6545, 20.477, 8.27146, -46.2645, 16.5147, -63.5263)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel13" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(-36.5622, -41.022, -1.40195, -6.02598, 3.50743, 54.5248, -40.6012, 36.4206, -6.83001, -131.609, 17.1902, -10.1022)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel14" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(-19.7933, 89.8433, -7.87748, -9.79528, 5.87572, 91.6252, 89.6545, 20.477, 8.27146, -132.71, 21.8537, -63.5263)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel15" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(-19.7933, 89.8433, -7.87748, -9.79528, 5.87572, 91.6252, 89.6545, 20.477, 8.27146, -132.71, 21.8537, -63.5263)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel8" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(-54.5816, 2.09403, -6.16696, -6.02598, 3.50743, 54.5248, 2.47058, 54.8168, -3.25317, -53.5397, 16.5147, 117.441)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel9" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(56.7005, 72.8614, 1.38918, -9.79528, 5.87572, 91.6252, 72.2133, -56.4123, 11.3376, -62.1611, 16.5147, 111.781)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel10" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(56.7005, 72.8614, 1.38918, -9.79528, 5.87572, 91.6252, 72.2133, -56.4123, 11.3376, -62.1611, 16.5147, 111.781)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel18" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(-11.0175, 53.6506, -4.66883, -6.02598, 3.50743, 54.5248, 53.5151, 11.4403, 5.17846, 155.652, -1.94728, -33.7292)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel19" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(83.9321, -36.7783, 11.3314, -9.79528, 5.87572, 91.6252, -37.217, -84.4895, 1.43941, 148.046, 0.804846, -26.7627)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel20" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(57.7908, 72.1754, 1.74408, -10.1379, 5.90079, 91.7308, 71.4813, -57.5153, 11.5998, 146.999, 0.450831, 18.1783)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel21" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(24.534, -88.6269, 8.30628, -9.79528, 5.87572, 91.6252, -88.4748, -25.2268, -7.84075, 147.742, 12.2261, 31.9905)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel22" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(41.2752, -149.103, 13.9742, -16.4793, 9.88512, 154.147, -148.847, -42.4408, -13.191, 147.931, 3.76627, 35.5042)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
 [node name="Funnel5" type="MeshInstance3D" parent="Seafloor/Funnels"]
-transform = Transform3D(-33.5444, 43.0625, -6.47736, -6.02598, 3.50743, 54.5248, 43.128, 33.9835, 2.58036, 123.488, 16.5147, 110.144)
+transform = Transform3D(-21.1832, 27.1939, -4.09044, -3.8054, 2.21494, 34.4323, 27.2353, 21.4605, 1.62949, 121.664, 16.5147, 110.676)
 mesh = SubResource("ArrayMesh_0s2xv")
 skeleton = NodePath("")
 
 [node name="Funnel6" type="MeshInstance3D" parent="Seafloor/Funnels"]
-transform = Transform3D(91.7376, 4.37037, 9.52703, -9.79528, 5.87572, 91.6252, 3.73053, -92.0436, 6.30137, 113.587, 16.5147, 113.029)
+transform = Transform3D(57.9322, 2.75988, 6.01631, -6.18571, 3.71051, 57.8612, 2.35582, -58.1254, 3.97931, 115.411, 16.5147, 112.497)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel16" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(-32.5224, -44.3092, -0.74402, -6.02598, 3.50743, 54.5248, -43.9038, 32.3412, -6.9326, -13.1702, 6.61805, 17.495)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel17" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(-28.2555, 87.4802, -8.6306, -9.79528, 5.87572, 91.6252, 87.3575, 28.9541, 7.48227, -13.2872, 6.61805, 7.18286)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel11" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(-46.4659, -29.1867, -3.25783, -6.02598, 3.50743, 54.5248, -28.7431, 46.4477, -6.1645, 119.095, -1.44709, -60.3867)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel12" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(6.09497, 91.9835, -5.24711, -9.79528, 5.87572, 91.6252, 91.6109, -5.4915, 10.1459, 115.169, 5.02511, -69.9227)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel23" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(39.4626, 38.2184, 1.90285, -6.02598, 3.50743, 54.5248, 37.7882, -39.3525, 6.70773, -15.5123, 15.2505, -150.617)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel24" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(13.1137, -91.1109, 7.24469, -9.79528, 5.87572, 91.6252, -90.8721, -13.7816, -8.83099, -13.6569, 23.1915, -140.472)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel25" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(54.2498, -6.13924, 6.3905, -6.02598, 3.50743, 54.5248, -6.49738, -54.5121, 2.78854, 26.9224, 21.2208, -113.978)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel26" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(-61.882, -68.4933, -2.22323, -9.79528, 5.87572, 91.6252, -67.8257, 61.6425, -11.204, 35.9385, 23.1915, -108.97)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel27" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(-61.882, -68.4933, -2.22323, -9.79528, 5.87572, 91.6252, -67.8257, 61.6425, -11.204, 35.9385, 23.1915, -108.97)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel28" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(-49.0514, 23.8156, -6.95306, -6.02598, 3.50743, 54.5248, 24.0668, 49.4174, -0.519062, -57.5281, 16.9932, -133.833)
+mesh = SubResource("ArrayMesh_0s2xv")
+skeleton = NodePath("")
+
+[node name="Funnel29" type="MeshInstance3D" parent="Seafloor/Funnels"]
+transform = Transform3D(80.8254, 44.2632, 5.80222, -9.79528, 5.87572, 91.6252, 43.554, -80.8201, 9.839, -67.6921, 24.8087, -135.579)
 mesh = SubResource("ArrayMesh_0s2xv")
 skeleton = NodePath("")
 
@@ -478,8 +678,78 @@ transform = Transform3D(179.61, 0, 0, 0, -2.14112e-05, 179.61, 0, -179.61, -2.14
 mesh = SubResource("ArrayMesh_g20tj")
 skeleton = NodePath("")
 
+[node name="Icosphere3" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(179.61, 0, 0, 0, -2.14112e-05, 179.61, 0, -179.61, -2.14112e-05, -23.2489, 11.8322, -57.2913)
+mesh = SubResource("ArrayMesh_g20tj")
+skeleton = NodePath("")
+
 [node name="Icosphere2" type="MeshInstance3D" parent="Seafloor/Clutter"]
 transform = Transform3D(99.5929, 0, 0, 0, -1.18724e-05, 99.5929, 0, -99.5929, -1.18724e-05, -22.0553, 11.2895, -59.3395)
+mesh = SubResource("ArrayMesh_g20tj")
+skeleton = NodePath("")
+
+[node name="Icosphere7" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(179.61, 0, 0, 0, -2.14112e-05, 179.61, 0, -179.61, -2.14112e-05, -109.694, 17.1712, -57.2913)
+mesh = SubResource("ArrayMesh_g20tj")
+skeleton = NodePath("")
+
+[node name="Icosphere8" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(179.61, 0, 0, 0, -2.14112e-05, 179.61, 0, -179.61, -2.14112e-05, -109.694, 17.1712, -57.2913)
+mesh = SubResource("ArrayMesh_g20tj")
+skeleton = NodePath("")
+
+[node name="Icosphere9" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(99.5929, 0, 0, 0, -1.18724e-05, 99.5929, 0, -99.5929, -1.18724e-05, -108.5, 16.6285, -59.3395)
+mesh = SubResource("ArrayMesh_g20tj")
+skeleton = NodePath("")
+
+[node name="Icosphere4" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(114.033, -138.767, -1.65423e-05, 0, -2.14112e-05, 179.61, -138.767, -114.033, -1.35938e-05, -42.7315, 9.0286, 97.9578)
+mesh = SubResource("ArrayMesh_g20tj")
+skeleton = NodePath("")
+
+[node name="Icosphere5" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(114.033, -138.767, -1.65423e-05, 0, -2.14112e-05, 179.61, -138.767, -114.033, -1.35938e-05, -23.6364, 4.9798, 97.9578)
+mesh = SubResource("ArrayMesh_g20tj")
+skeleton = NodePath("")
+
+[node name="Icosphere6" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(63.2308, -76.9455, -9.17262e-06, 0, -1.18724e-05, 99.5929, -76.9455, -63.2308, -7.5377e-06, -43.5561, 8.49975, 95.7353)
+mesh = SubResource("ArrayMesh_g20tj")
+skeleton = NodePath("")
+
+[node name="Icosphere13" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(63.2308, -76.9455, -9.17262e-06, 0, -1.18724e-05, 99.5929, -76.9455, -63.2308, -7.5377e-06, 39.8529, 0.663202, 95.7353)
+mesh = SubResource("ArrayMesh_g20tj")
+skeleton = NodePath("")
+
+[node name="Icosphere10" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(-179.356, -9.55346, -1.13886e-06, -3.11655e-13, -2.14112e-05, 179.61, -9.55346, 179.356, 2.13809e-05, 125.09, 1.22375, 24.5402)
+mesh = SubResource("ArrayMesh_g20tj")
+skeleton = NodePath("")
+
+[node name="Icosphere11" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(-179.356, -9.55346, -1.13886e-06, -3.11655e-13, -2.14112e-05, 179.61, -9.55346, 179.356, 2.13809e-05, 113.769, 0.691207, 9.16332)
+mesh = SubResource("ArrayMesh_g20tj")
+skeleton = NodePath("")
+
+[node name="Icosphere12" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(-99.4519, -5.29735, -6.31492e-07, 0, -1.18724e-05, 99.5929, -5.29735, 99.4519, 1.18556e-05, 123.789, 0.0941849, 26.522)
+mesh = SubResource("ArrayMesh_g20tj")
+skeleton = NodePath("")
+
+[node name="Icosphere14" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(-103.466, 146.814, 1.75017e-05, -2.55542e-13, -2.14112e-05, 179.61, 146.814, 103.466, 1.23342e-05, 17.5835, 7.22489, -93.749)
+mesh = SubResource("ArrayMesh_g20tj")
+skeleton = NodePath("")
+
+[node name="Icosphere15" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(-103.466, 146.814, 1.75017e-05, -2.55542e-13, -2.14112e-05, 179.61, 146.814, 103.466, 1.23342e-05, -1.45934, 6.69234, -92.3379)
+mesh = SubResource("ArrayMesh_g20tj")
+skeleton = NodePath("")
+
+[node name="Icosphere16" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(-57.3716, 81.4079, 9.70458e-06, 8.8331e-14, -1.18724e-05, 99.5929, 81.4079, 57.3716, 6.83923e-06, 18.5702, 6.09532, -91.5934)
 mesh = SubResource("ArrayMesh_g20tj")
 skeleton = NodePath("")
 
@@ -498,12 +768,42 @@ transform = Transform3D(-187.743, 230.872, 0.035011, 0.0166076, -0.0316199, 297.
 mesh = SubResource("ArrayMesh_ks4c7")
 skeleton = NodePath("")
 
+[node name="ShrimpHouse7" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(231.857, -186.525, -2.22355e-05, 0, -3.54734e-05, 297.572, -186.525, -231.857, -2.76395e-05, 19.6031, -0.0294147, 85.0743)
+mesh = SubResource("ArrayMesh_ks4c7")
+skeleton = NodePath("")
+
+[node name="ShrimpHouse8" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(286.256, 81.2829, 9.68968e-06, 0, -3.54734e-05, 297.572, 81.2829, -286.256, -3.41243e-05, 10.6646, -0.0294147, 81.9585)
+mesh = SubResource("ArrayMesh_ks4c7")
+skeleton = NodePath("")
+
+[node name="ShrimpHouse9" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(-187.743, 230.872, 0.035011, 0.0166076, -0.0316199, 297.572, 230.872, 187.743, 0.00706096, 26.6389, -0.0294137, 73.7089)
+mesh = SubResource("ArrayMesh_ks4c7")
+skeleton = NodePath("")
+
+[node name="ShrimpHouse4" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(-259.696, 145.283, 1.7319e-05, -1.32534e-12, -3.54734e-05, 297.572, 145.283, 259.696, 3.09582e-05, 7.12822, -0.010241, 39.6721)
+mesh = SubResource("ArrayMesh_ks4c7")
+skeleton = NodePath("")
+
+[node name="ShrimpHouse5" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(-268.71, -127.846, -1.52404e-05, 5.7755e-13, -3.54734e-05, 297.572, -127.846, 268.71, 3.20326e-05, 15.4226, -0.010241, 44.2337)
+mesh = SubResource("ArrayMesh_ks4c7")
+skeleton = NodePath("")
+
+[node name="ShrimpHouse6" type="MeshInstance3D" parent="Seafloor/Clutter"]
+transform = Transform3D(223.589, -196.36, -0.0333449, 0.0166076, -0.0316199, 297.572, -196.36, -223.589, -0.0127962, -1.70304, -0.0102401, 49.7062)
+mesh = SubResource("ArrayMesh_ks4c7")
+skeleton = NodePath("")
+
 [node name="Env" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Env"]
 environment = SubResource("Environment_0evto")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env"]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(0.714414, -0.605979, 0.34986, 1.47563e-08, 0.499998, 0.866027, -0.699723, -0.618701, 0.357207, -9.49169, 0, 25.5019)
 light_color = Color(0.597176, 0.597176, 0.597176, 1)
 shadow_enabled = true
