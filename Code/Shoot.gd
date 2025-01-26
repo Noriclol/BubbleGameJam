@@ -5,8 +5,6 @@ class_name Shoot
 
 signal send_bubble_count(bubbles : int)
 
-func _ready():
-	send_bubble_count.emit(Global.player.bubbles)
 
 func shoot(muzzle : Muzzle, shoot_direction : Enum.ShootDirection) -> void:
 	if (Global.player.bubbles >= 1):
