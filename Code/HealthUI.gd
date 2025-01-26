@@ -1,6 +1,6 @@
 extends PanelContainer
 
-var parts : Array[TextureRect] = [%Part1, %Part2, %Part3, %Part4, %Part5, %Part6, %Part7]
+@onready var parts : Array[TextureRect] = [$Part1, $Part2, $Part3, $Part4, $Part5, $Part6, $Part7]
 
 
 
