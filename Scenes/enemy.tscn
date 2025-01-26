@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://6nwqiqly47f3"]
+
+[ext_resource type="Script" uid="uid://dg8nfrrbjdu8q" path="res://Code/Enemy.gd" id="1_hghv2"]
+[ext_resource type="Script" uid="uid://cgqcyntem630s" path="res://Code/Hurt.gd" id="2_afpow"]
+[ext_resource type="Script" uid="uid://cbe1xmnyntimi" path="res://Code/Health.gd" id="3_287tu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hghv2"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1f0kj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_afpow"]
+radius = 4.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0830c"]
+
+[node name="Enemy" type="RigidBody3D" node_paths=PackedStringArray("health")]
+script = ExtResource("1_hghv2")
+health = NodePath("Health")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_hghv2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_1f0kj")
+
+[node name="TriggerArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerArea"]
+transform = Transform3D(0.99815, 0, 0, 0, 0.99815, 0, 0, 0, 0.99815, 0, 0, 0)
+shape = SubResource("SphereShape3D_afpow")
+
+[node name="Hurt" type="Area3D" parent="."]
+script = ExtResource("2_afpow")
+metadata/_custom_type_script = ExtResource("2_afpow")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hurt"]
+shape = SubResource("CapsuleShape3D_0830c")
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("3_287tu")
+max_health = 3
+metadata/_custom_type_script = ExtResource("3_287tu")
+
+[connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
