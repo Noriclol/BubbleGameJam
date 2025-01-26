@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://t1ardlb2hkt3"]
+[gd_scene load_steps=11 format=3 uid="uid://t1ardlb2hkt3"]
 
 [ext_resource type="PackedScene" uid="uid://cr4uv863lah6k" path="res://Scenes/player.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" path="res://Scenes/TrailMesh.tscn" id="3_21xkr"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" path="res://Scenes/camera_target.tscn" id="4_kry3j"]
 [ext_resource type="PackedScene" path="res://Scenes/Plankton_Pickup.tscn" id="7_6bp64"]
 [ext_resource type="PackedScene" uid="uid://cdapi11pqot2b" path="res://Scenes/enviroment.tscn" id="7_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://6nwqiqly47f3" path="res://Scenes/enemy.tscn" id="8_344ge"]
+[ext_resource type="Script" uid="uid://dxjvc8y7aoj3l" path="res://Code/EnemyManager.gd" id="9_ynf5e"]
 
 [sub_resource type="Curve3D" id="Curve3D_8gbba"]
 _data = {
@@ -264,3 +266,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -503.464, 64.2761, 567.504)
 
 [node name="PlanktonPickup70" parent="Plankton nodes" instance=ExtResource("7_6bp64")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -506.916, 64.2805, 567.122)
+
+[node name="Enemy" parent="." instance=ExtResource("8_344ge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95657, 24.7356)
+
+[node name="EnemyManager" type="Node" parent="." node_paths=PackedStringArray("path_follow")]
+script = ExtResource("9_ynf5e")
+path_follow = NodePath("../Game/Map/Trails/Trail/PathFollow3D")
+metadata/_custom_type_script = ExtResource("9_ynf5e")

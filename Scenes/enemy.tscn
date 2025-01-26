@@ -4,9 +4,9 @@
 [ext_resource type="Script" uid="uid://cgqcyntem630s" path="res://Code/Hurt.gd" id="2_afpow"]
 [ext_resource type="Script" uid="uid://cbe1xmnyntimi" path="res://Code/Health.gd" id="3_287tu"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hghv2"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_afpow"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_1f0kj"]
+[sub_resource type="CylinderMesh" id="CylinderMesh_287tu"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_afpow"]
 radius = 4.0
@@ -18,10 +18,10 @@ script = ExtResource("1_hghv2")
 health = NodePath("Health")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_hghv2")
+shape = SubResource("CylinderShape3D_afpow")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("CapsuleMesh_1f0kj")
+mesh = SubResource("CylinderMesh_287tu")
 
 [node name="TriggerArea" type="Area3D" parent="."]
 

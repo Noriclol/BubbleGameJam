@@ -13,19 +13,18 @@ func _ready() -> void:
 	health.die.connect(on_die)
 
 func _physics_process(delta:float) -> void:
-	pass
-	#if should_follow:
-	#	move_enemy(delta)
+	if should_follow:
+		move_enemy(delta)
 
 
 func move_enemy(delta:float) -> void:
 	# move enemy towards player
 	var direction = (Global.player.global_transform.origin - global_transform.origin).normalized()
-	
-	if direction.x < 0:
-		path_follow.progress -= speed * delta
+	print(direction.z)
+	if direction.z < 0:
+		Global.enemy_manager.path_follow.progress -= speed * delta
 	else:
-		path_follow.progress += speed * delta
+		Global.enemy_manager.path_follow.progress += speed * delta
 
 
 
