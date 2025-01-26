@@ -2,7 +2,7 @@ extends PanelContainer
 
 class_name BubbleUI
 
-@onready var bubble_label : Label = %BubbleLabel
+@export var bubble_label : Label
 
 func _ready():
 	update_bubble_ui(Global.player.bubbles)

@@ -90,10 +90,8 @@ func process_input():
 
 		#if mouse position z is bigger than player position, shoot right
 		if ray_target.z > Global.player.global_position.z:
-			print("Shoot Right")
 			Global.player.shoot.shoot(Global.player.muzzle, Enum.ShootDirection.RIGHT)
 		else:
 			#shoot left
-			print("Shoot Left")
 			Global.player.shoot.shoot(Global.player.muzzle, Enum.ShootDirection.LEFT)
 		

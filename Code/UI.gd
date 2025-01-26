@@ -9,3 +9,6 @@ extends CanvasLayer
 @onready var acceleration = %Acceleration
 @onready var health_ui = %HealthUI
 @onready var bubble_ui = %BubbleUI
+@onready var plankton_ui = %PlanktonUI
+
+signal plankton_picked_up(plankton : int)
