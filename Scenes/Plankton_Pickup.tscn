@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6spbgq5520so"]
 
 [ext_resource type="Script" uid="uid://34mnjbuwxpt7" path="res://Code/plankton_pickup.gd" id="1_krat7"]
-[ext_resource type="PackedScene" uid="uid://b4r1sfqed7sjm" path="res://Assets/Enviroment/algea_point.tscn" id="2_krat7"]
+[ext_resource type="PackedScene" path="res://Assets/Enviroment/algea_point.tscn" id="2_krat7"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_8prji"]
 radius = 0.6
@@ -10,6 +10,7 @@ radius = 0.6
 script = ExtResource("1_krat7")
 
 [node name="AlgeaPoint" parent="." instance=ExtResource("2_krat7")]
+transform = Transform3D(-8.6601e-08, 0, 1.9812, 0, 1.9812, 0, -1.9812, 0, -8.6601e-08, 0, 0.886715, 0)
 
 [node name="Area3D" type="Area3D" parent="."]
 
